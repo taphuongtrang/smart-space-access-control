@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSpace - Access Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="topbar">
+        <h2>SMARTSPACE</h2>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="access.html" class="active">Access Request</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-section">
+            <div>
+                <h1>Access Request</h1>
+                <p>Context-Based Access Control Evaluation</p>
+            </div>
+        </section>
+
+        <section class="access-layout">
+
+            <div class="content-card">
+                <h2>Request Information</h2>
+
+                <form id="accessForm">
+
+                    <div class="access-form-group">
+                        <label for="user">User</label>
+                        <select id="user" required>
+                            <option value="">Select user</option>
+                            <option value="admin">Admin</option>
+                            <option value="staff">Staff</option>
+                            <option value="guest">Guest</option>
+                        </select>
+                    </div>
+
+                    <div class="access-form-group">
+                        <label for="zone">Target Zone</label>
+                        <select id="zone" required>
+                            <option value="">Select zone</option>
+                            <option value="office">Office Area</option>
+                            <option value="meeting">Meeting Room</option>
+                            <option value="server">Server Room</option>
+                            <option value="lab">Laboratory</option>
+                        </select>
+                    </div>
+
+                    <div class="access-form-group">
+                        <label for="time">Access Time</label>
+                        <input type="datetime-local" id="time" required>
+                    </div>
+
+                    <h3 class="context-heading">Context Information</h3>
+
+                    <div class="access-form-group">
+                        <label for="location">Current Location</label>
+                        <select id="location" required>
+                            <option value="">Select location</option>
+                            <option value="office">Office Area</option>
+                            <option value="outside">Outside Building</option>
+                        </select>
+                    </div>
+
+                    <div class="access-form-group">
+                        <label for="device">Device Status</label>
+                        <select id="device" required>
+                            <option value="">Select status</option>
+                            <option value="trusted">Trusted Device</option>
+                            <option value="untrusted">Untrusted Device</option>
+                        </select>
+                    </div>
+
+                    <div class="access-form-group">
+                        <label for="environment">Environment</label>
+                        <select id="environment" required>
+                            <option value="">Select environment</option>
+                            <option value="normal">Normal</option>
+                            <option value="warning">Warning</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        EVALUATE ACCESS
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="content-card result-card">
+                <h2>Access Decision</h2>
+
+                <div id="result">
+                    <div class="result-placeholder">
+                        <span>?</span>
+                        <p>Waiting for access request</p>
+                        <small>
+                            Submit a request to evaluate access permissions.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

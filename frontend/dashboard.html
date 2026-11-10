@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSpace - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="topbar">
+        <h2>SMARTSPACE</h2>
+
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="access.html">Access Request</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-section">
+            <div>
+                <h1>System Dashboard</h1>
+                <p>Context-Based Access Control for Smart Space</p>
+            </div>
+            <span class="system-status">● System Online</span>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Users</p>
+                <h2>25</h2>
+                <span>Registered users</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Smart Devices</p>
+                <h2>12</h2>
+                <span>Connected devices</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Smart Zones</p>
+                <h2>05</h2>
+                <span>Managed areas</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Access Requests</p>
+                <h2>18</h2>
+                <span>Total requests</span>
+            </div>
+
+        </section>
+
+        <section class="content-card">
+            <h2>Smart Space Overview</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Zone</th>
+                        <th>Device</th>
+                        <th>Status</th>
+                        <th>Access</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Meeting Room</td>
+                        <td>Smart Door</td>
+                        <td class="online">Online</td>
+                        <td>Restricted</td>
+                    </tr>
+
+                    <tr>
+                        <td>Server Room</td>
+                        <td>Smart Lock</td>
+                        <td class="online">Online</td>
+                        <td>Restricted</td>
+                    </tr>
+
+                    <tr>
+                        <td>Office Area</td>
+                        <td>Smart Sensor</td>
+                        <td class="online">Online</td>
+                        <td>Public</td>
+                    </tr>
+
+                    <tr>
+                        <td>Laboratory</td>
+                        <td>Smart Camera</td>
+                        <td class="online">Online</td>
+                        <td>Restricted</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-card">
+            <h2>Recent Access Activity</h2>
+
+            <p class="empty-message">
+                No recent access activity available.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>
